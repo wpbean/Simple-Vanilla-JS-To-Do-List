@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+body {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    background: #2a7b9b;
+    background: linear-gradient(
+        90deg,
+        rgba(42, 123, 155, 1) 0%,
+        rgba(87, 199, 133, 1) 50%,
+        rgba(237, 221, 83, 1) 100%
+    );
+}
+
+.container {
+    max-width: 600px;
+    margin: 100px auto 0;
+    padding: 40px 30px;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 0 20px;
+}
+
+.title-container h1 {
+    font-family: "Inter", sans-serif;
+    color: hsl(250, 3%, 0%);
+    text-align: center;
+    font-size: 2em;
+    line-height: 1.1em;
+    letter-spacing: -0.045em;
+    font-weight: 900;
+    margin-bottom: 30px;
+}
+
+form#taskForm {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#taskForm input[type="text"] {
+    flex: 1;
+    border-radius: 10px;
+    height: 46px;
+    padding: 0 14px;
+    font-size: 15px;
+    transition: box-shadow 0.1s;
+    box-shadow: inset hsl(250, 3%, 85%) 0 0 0 1px, inset white 0 0 0 100px !important;
+    border: none;
+    width: 100%;
+    color: hsl(250, 3%, 0%) !important;
+    font-family: "Inter", sans-serif;
+}
+#taskForm input[type="text"]:focus {
+    outline: none;
+    box-shadow: inset #3e9d91 0 0 0 1px, inset white 0 0 0 100px !important;
+}
+
+#taskForm button {
+    border-radius: 10px;
+    font-size: 16px;
+    padding: 0 21px;
+    height: 46px;
+    line-height: 46px;
+    border: 0;
+    background: rgb(87, 199, 133);
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#taskForm button:hover {
+    background: #3e9d91;
+}
+
+ul#taskList {
+    list-style: none;
+}
+
+#taskList li {
+    padding: 12px 0 12px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    font-size: 16px;
+    color: hsl(280, 1%, 43%);
+    transition: color 0.3s;
+    position: relative;
+}
+
+#taskList li:hover {
+    color: hsl(250, 3%, 0%);
+    cursor: pointer;
+}
+
+#taskList li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 22px;
+    height: 22px;
+    border-radius: 6px;
+    background: hsl(250, 3%, 95%);
+    border: 2px solid hsl(250, 3%, 85%);
+    box-sizing: border-box;
+    transition: background 0.3s, border-color 0.3s;
+    cursor: pointer;
+}
+
+#taskList li.completed::before,
+#taskList li.completed:hover::before {
+    background: rgb(87, 199, 133);
+    border-color: rgb(87, 199, 133);
+}
+
+#taskList li.completed::after {
+    content: "";
+    position: absolute;
+    left: 7px;
+    top: 48%;
+    transform: translateY(-50%) rotate(45deg);
+    width: 5px;
+    height: 10px;
+    border-right: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+    border-radius: 1px;
+    pointer-events: none;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 0 20px;
+}
+
+#taskList li:hover::before {
+    border-color: hsl(250, 3%, 70%);
+}
+
+#taskList li.completed {
+    text-decoration: line-through;
+}
+#taskList li button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: hsl(250, 3%, 85%);
+    border: none;
+    padding: 5px 7px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+#taskList li button svg {
+    width: 15px;
+    height: 15px;
+}
+#taskList li button:hover {
+    background: hsl(250, 3%, 70%);
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 12px 0;
+    font-size: 14px;
+    color: #fff;
+    margin-top: 30px;
+}
