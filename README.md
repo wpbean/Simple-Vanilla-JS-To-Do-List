@@ -2,8 +2,6 @@
 
 A simple, minimal to-do list web application built with plain JavaScript. This app allows users to add, complete, and delete tasks. All data is stored in the browser's `localStorage`, so your tasks persist even after a page reload.
 
-![screenshot](https://via.placeholder.com/800x400?text=To-Do+App+Screenshot)
-
 ## 🚀 Features
 
 -   ✅ Add new tasks
@@ -29,7 +27,7 @@ A simple, minimal to-do list web application built with plain JavaScript. This a
 
 ## 🚀 Live Demo
 
-👉 [Click here to view the live app](https://vanilla-js-todo-list-app-sandy.vercel.app/)
+👉 [Click here to view the live app](https://simple-vanilla-js-to-do-list.vercel.app/)
 
 ## 👨‍💻 Author
 
